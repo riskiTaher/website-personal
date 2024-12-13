@@ -1,0 +1,203 @@
+body {
+  font-family: Arial, sans-serif; /* Penulisan sesuai standar */
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+  color: #333;
+}
+
+/* Navbar umum */
+.navbar {
+  position: relative;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #4caf50;
+}
+
+.hamburger-menu {
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+  display: block;
+}
+
+.nav-links {
+  display: none; /* Disembunyikan secara default */
+  flex-direction: column;
+  position: absolute;
+  top: 50px;
+  left: 10px;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  z-index: 1000;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.nav-links a:hover {
+  background-color: #4caf50;
+  color: white;
+}
+
+/* Responsive behavior */
+@media (min-width: 600px) {
+  .hamburger-menu {
+    display: none; /* Sembunyikan hamburger di layar besar */
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: row;
+    position: static;
+    background-color: transparent;
+    border: none;
+  }
+
+  .nav-links a {
+    color: white;
+    padding: 0 15px;
+    border: none;
+  }
+
+  .nav-links a:hover {
+    background-color: transparent;
+    color: #333;
+  }
+}
+
+header {
+  background-color: #4caf50;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+main {
+  padding: 20px;
+}
+
+h2 {
+  color: #4caf50;
+  margin-bottom: 10px;
+}
+
+ul {
+  list-style-type: disc;
+  margin: 0;
+  padding: 0 20px;
+}
+
+.about, .hobbies, .contact {
+  border: 1px solid #333;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+a {
+  color: #4caf50;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #333;
+  color: white;
+  margin-top: 40px;
+}
+
+/* Gaya tambahan untuk membuat responsif */
+@media (max-width: 600px) {
+  header {
+    font-size: 18px;
+    padding: 10px;
+  }
+  
+  header:hover {
+  background-color: #45a049;
+  transition: background-color 0.3s ease-in-out;
+}
+
+  main {
+    padding: 10px;
+  }
+
+  ul {
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 24px;
+  }
+
+  p, ul {
+    font-size: 14px;
+  }
+}
+/* Grid untuk menampilkan foto */
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  padding: 10px;
+  justify-items: center;
+}
+
+.photo {
+  width: 100%;
+  max-width: 200px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.photo:hover {
+  transform: scale(1.1); 
+}
+
+.back-link {
+  color: #4caf50;
+  background-color: black;
+  
+}
+
+.guestbook-form, .guestbook-messages {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+form label {
+  display: block;
+  margin: 5px 0 2px;
+}
+
+form input, form textarea, form button {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+.countdown {
+  text-align: center;
+  padding: 20px;
+  font-size: 24px;
+  border: 1px solid #4caf50;
+  background-color: #f4f4f9;
+  margin-top: 20px;
+}

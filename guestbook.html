@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buku Tamu</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <h1>Buku Tamu</h1>
+    <p>Tinggalkan pesan untuk saya di sini!</p>
+  </header>
+  <main>
+    <a href="index.html" class="back-link">Home</a>
+    <a href="album.html" class="back-link">Album</a>
+    <a href="birthday.html" class="back-link">Hari Ultah Me</a>
+    <section class="guestbook-form">
+      <h2>Tulis Pesan</h2>
+      <form id="guestForm">
+        <label for="name">Nama:</label>
+        <input type="text" id="name" name="name" required>
+        <label for="message">Pesan:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+        <button type="submit">Kirim</button>
+      </form>
+    </section>
+    <section class="guestbook-messages">
+      <h2>Pesan Tamu</h2>
+      <ul id="messagesList">
+        <!-- Pesan akan muncul di sini -->
+      </ul>
+    </section>
+  </main>
+  <footer class="footer">
+<p>&copy; 2024 - Website Bio Data Diri</p>
+  </footer>
+  <script src="script/guestbook.js"></script>
+</body>
+</html>

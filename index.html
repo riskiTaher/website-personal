@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Halaman biodata Riski Aditia, pelajar dengan hobi bermain gitar, membaca buku, dan belajar coding.">
+  <title>Bio Data Diri</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="navbar">
+      <div class="hamburger-menu" onclick="toggleMenu()">☰</div>
+      <nav class="nav-links">
+        <a href="album.html">Album saya</a>
+        <a href="guestbook.html">Buku Tamu</a>
+        <a href="birthday.html">Hari Ultah ME</a>
+      </nav>
+    </div>
+    <h1>RISKI ADITIA</h1>
+    <p>Selamat datang dihalaman bio data saya!</p>
+  </header>
+  
+  <main>
+    <section id="about" class="about">
+      <h2>Tentang Saya</h2>
+      <p>Saya seorang pelajar yang sedang belajar html dan css. Hobi saya adalah bermain gitar, mager, membaca buku, dan coding.</p>
+    </section>
+    
+    <section id="hobbies" class="hobbies">
+      <h2>Hobi Saya</h2>
+      <ul>
+        <li>Bermain gitar</li>
+        <li>Mageran xD</li>
+        <li>Membaca buku</li>
+        <li>Belajar pemrograman</li>
+      </ul>
+    </section>
+    
+    <section id="contact" class="contact">
+      <h2>Kontak Saya</h2>
+      <p>Email: <a href="mailto:rainaditia61@gmail.com">rainaditia61@gmail.com</a></p>
+      <p>Nomor HP: +6282189041503</p>
+    </section>
+  </main>
+  
+  <footer class="footer">
+    <p>&copy; 2024 - Website Bio Data Diri</p>
+  </footer>
+</body>
+
+<script>
+  // Fungsi untuk toggle menu (hamburger)
+  function toggleMenu() {
+    const navLinks = document.querySelector('.nav-links');
+    navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+  }
+
+  // Scroll otomatis hanya untuk tautan internal
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', function (e) {
+      const href = this.getAttribute('href');
+      
+      // Periksa apakah tautan adalah internal (dimulai dengan "#")
+      if (href.startsWith('#')) {
+        e.preventDefault(); // Mencegah perilaku default
+        const targetId = href.substring(1); // Hapus tanda #
+        const targetElement = document.getElementById(targetId);
+
+        // Scroll ke elemen target dengan animasi
+        if (targetElement) {
+          window.scrollTo({
+            top: targetElement.offsetTop,
+            behavior: 'smooth'
+          });
+        }
+
+        // Sembunyikan menu setelah klik (jika di layar kecil)
+        const navLinks = document.querySelector('.nav-links');
+        navLinks.style.display = 'none';
+      } else {
+        // Untuk tautan eksternal atau halaman lain, biarkan default
+        return;
+      }
+    });
+  });
+</script>
+
+</html>
